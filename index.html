@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Locket 🤍</title>
+  <meta name="description" content="An interactive silver locket holding a photo.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🤍</text></svg>">
+</head>
+<body>
+
+  <!-- Ambient gold particles -->
+  <canvas id="particle-canvas" aria-hidden="true"></canvas>
+
+  <!-- Main scene -->
+  <main class="scene">
+
+    <!-- Chain & Locket Assembly -->
+    <div class="chain-container">
+      <div class="chain-v" aria-hidden="true"></div>
+      <div class="chain" aria-hidden="true"></div>
+      <div class="bail" aria-hidden="true"></div>
+
+      <!-- Locket -->
+      <div class="locket-wrapper" id="locket" role="button" tabindex="0" aria-label="Click to open the locket and reveal the photo">
+        <div class="locket">
+
+          <!-- Back panel (with the photo inside) -->
+          <div class="locket-back">
+            <div class="locket-interior">
+              <div class="photo-frame">
+                <img src="photo.png" alt="Photo inside the locket">
+              </div>
+            </div>
+          </div>
+
+          <!-- Front cover (hinges open to the left) -->
+          <div class="locket-front">
+            <!-- Front Face -->
+            <div class="locket-face">
+              <div class="light-sweep" aria-hidden="true"></div>
+              <div class="locket-engraving" aria-hidden="true"></div>
+              <div class="heart-engraving" aria-hidden="true">♥</div>
+            </div>
+            <!-- Inner Lid Face -->
+            <div class="locket-face-inner">
+              <div class="locket-face-inner-lining">
+              </div>
+            </div>
+          </div>
+
+          <!-- Clasp -->
+          <div class="locket-clasp" aria-hidden="true"></div>
+
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
